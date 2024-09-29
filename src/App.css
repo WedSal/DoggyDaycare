@@ -5,11 +5,11 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
  height: 100%;
- font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -55,8 +55,8 @@ body {
   flex: 1;
   display: flex;
   flex-direction:row;
+  padding-top: 60px;
 }
-
 
 
 .hero {
@@ -64,8 +64,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
+  height: calc(100vh - 60px);
+  width: 100%;
   display:flex;
   align-items: center;
   justify-content: flex-end;
@@ -125,70 +125,4 @@ body {
 
 .button:hover {
   background-color: #333;
-}
-
-.dog-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
-}
-
-.dog-item {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.dog-item {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.dog-item:hover {
-  transform: translateY(-5px);
-}
-
-.dog-link {
-  color: #3c6e5b;
-  text-decoration: none;
-  display: block;
-}
-
-.dog-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.dog-details {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.dog-details .dog-image {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.detail {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 0.5rem;
 }
