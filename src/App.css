@@ -1,14 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   box-sizing: border-box;
 }
 
-body, html {
- height: 100%;
-
-}
 
 .app-container {
   display: flex;
@@ -16,29 +11,25 @@ body, html {
   min-height: 100vh;
 }
 
+
 .header {
   background-color: rgba(181, 125, 191, 0.485);
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
+  position: sticky; 
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
-
-}
-
-.logo {
-  width: 50px;
-  height: auto;
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; 
 }
 
 .nav {
   display: flex;
+  justify-content: flex-end; 
   gap: 1.5rem;
-
 }
 
 .nav-link {
@@ -46,32 +37,35 @@ body, html {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
   padding: 0.5rem 1rem;
-  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.nav-link:hover {
+  color: #fff;
+}
+
+
 .main-content {
-  flex: 1;
+  flex-grow: 1;
+  width: 100vw;
+  min-height: calc(100vh - 60px);
   display: flex;
-  flex-direction:row;
-  padding-top: 60px;
+  flex-direction: column;
 }
 
 
 .hero {
-  background-image: url(https://cdn.create.vista.com/api/media/small/633537894/stock-photo-cute-long-haired-red-chihuahua-dog-walking-street-little-doggy) ;
+  background-image: url(https://cdn.create.vista.com/api/media/small/633537894/stock-photo-cute-long-haired-red-chihuahua-dog-walking-street-little-doggy);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: calc(100vh - 60px);
-  width: 100%;
-  display:flex;
+  height: calc(100vh - 60px); 
+  width: 100vw;
+  display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-right: 2rem;
+  justify-content: center;
   position: relative;
-
 }
 
 .hero::before {
@@ -81,20 +75,17 @@ body, html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); 
   z-index: 1;
 }
 
 .hero-content {
-  text-align: center;
   background-color: rgba(181, 125, 191, 0.485);
-  position: relative;
-  z-index: 2;
   padding: 2rem;
   border-radius: 8px;
   max-width: 500px;
-  margin-right: 2rem;
-
+  position: relative;
+  z-index: 2;
 }
 
 .title {
@@ -117,8 +108,6 @@ body, html {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
