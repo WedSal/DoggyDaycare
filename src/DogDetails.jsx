@@ -12,7 +12,7 @@ function DogDetails() {
         const fetchDog = async () => {
             try {
                 setIsLoading(true);
-                const response = await fetch("https://api.jsonbin.io/v3/b/66ea6857e41b4d34e4325758");
+                const response = await fetch("https://api.jsonbin.io/v3/b/67289972e41b4d34e44e1b9b");
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
